@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumFlow Infotech | AI-Powered Account Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Gesture Guide Arrows -->
+    <div class="gesture-guides">
+        <div class="gesture-arrow left-arrow" id="leftGesture">
+            <i class="fas fa-hand-point-left"></i>
+        </div>
+        <div class="gesture-arrow right-arrow" id="rightGesture">
+            <i class="fas fa-hand-point-right"></i>
+        </div>
+    </div>
+
+    <!-- Loading Animation -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+        </div>
+        <div class="loading-text">Initializing QuantumFlow...</div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-infinity logo-icon"></i>
+                <div class="logo-text">Quantum<span>Flow</span></div>
+                <div class="logo-badge">AI-Powered</div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="#features" class="nav-link">
+                    <i class="fas fa-star"></i> Features
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="#video" class="nav-link">
+                    <i class="fas fa-play-circle"></i> Demo
+                </a>
+                <a href="#appointment" class="nav-link nav-cta">
+                    <i class="fas fa-calendar-check"></i> Book Demo
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="logo">
+                <i class="fas fa-infinity logo-icon"></i>
+                <div class="logo-text">Quantum<span>Flow</span></div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="#features" class="mobile-nav-link">
+                <i class="fas fa-star"></i> Features
+            </a>
+            <a href="#about" class="mobile-nav-link">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+            <a href="#video" class="mobile-nav-link">
+                <i class="fas fa-play-circle"></i> Video Demo
+            </a>
+            <a href="#appointment" class="mobile-nav-link nav-cta">
+                <i class="fas fa-calendar-check"></i> Book Appointment
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Enhanced Slider -->
+    <section class="hero-section" id="home">
+        <div class="hero-slider">
+            <div class="slider-track">
+                <!-- Slide 1 -->
+                <div class="slider-slide active" style="background-image: url('earth.avif'); background-size: cover; background-position: center;">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <div class="slide-tag animate-on-scroll">
+                            <i class="fas fa-bolt"></i> AI-Powered Platform
+                        </div>
+                        <h1 class="slide-title animate-on-scroll">Transform Account Management with <span class="highlight">Quantum AI</span></h1>
+                        <p class="slide-description animate-on-scroll">Leverage artificial intelligence to manage, retain, and grow customer relationships with unprecedented efficiency and predictive insights.</p>
+                        <div class="slide-buttons animate-on-scroll">
+                            <a href="#features" class="btn-primary">
+                                <i class="fas fa-rocket"></i> Explore Features
+                            </a>
+                            <a href="#video" class="btn-secondary">
+                                <i class="fas fa-play"></i> Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide-visual">
+                        <div class="floating-element element-1">
+                            <i class="fas fa-chart-network"></i>
+                        </div>
+                        <div class="floating-element element-2">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slider-slide" style="background-image: url('customer.jpg'); background-size: cover; background-position: center;">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <div class="slide-tag">
+                            <i class="fas fa-user-shield"></i> Self-Service Portal
+                        </div>
+                        <h1 class="slide-title">Empower Customers with <span class="highlight">Real-Time Access</span></h1>
+                        <p class="slide-description">Provide 24/7 access to account details, transaction histories, and personalized support through our intuitive customer portal.</p>
+                        <div class="slide-buttons">
+                            <a href="#appointment" class="btn-primary">
+                                <i class="fas fa-calendar-alt"></i> Schedule Demo
+                            </a>
+                            <a href="#features" class="btn-secondary">
+                                <i class="fas fa-eye"></i> View Features
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <button class="slider-arrow prev" id="sliderPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-arrow next" id="sliderNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator animate-bounce">
+                <i class="fas fa-chevron-down"></i>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <i class="fas fa-video"></i> Interactive Demo
+                </div>
+                <h2 class="section-title">See QuantumFlow in Action</h2>
+                <p class="section-subtitle">Watch our comprehensive demo to understand how our AI-powered platform transforms account management.</p>
+            </div>
+
+            <!-- Video Container with Play Button -->
+            <div class="video-container animate-on-scroll">
+                <div class="video-placeholder">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="QuantumFlow Demo Video">
+                        <div class="play-overlay">
+                            <button class="play-btn" id="playVideoBtn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Button with Animated Emoji -->
+                    <div class="video-action-container">
+                        <div class="emoji-pointer animate-wiggle">
+                            <i class="fas fa-hand-point-down"></i>
+                        </div>
+                        <p class="video-action-text">For more information, watch our detailed walkthrough</p>
+                        <a href="https://youtu.be/F_7ikEiH-mA?si=ZFeji5auk6dheObg" 
+                           target="_blank" 
+                           class="video-btn animate-pulse">
+                            <i class="fab fa-youtube"></i>
+                            Watch Full Demo Video
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <div class="video-stats">
+                            <span><i class="fas fa-clock"></i> 12 min</span>
+                            <span><i class="fas fa-eye"></i> 5.2K views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 98% liked</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <i class="fas fa-info-circle"></i> About QuantumFlow
+                </div>
+                <h2 class="section-title">AI-Powered Account Management Solution</h2>
+                <p class="section-subtitle">We help businesses strengthen account management with intelligent insights, team alignment, and clear direction for every customer interaction.</p>
+            </div>
+
+            <div class="intro-content">
+                <div class="intro-text animate-on-scroll">
+                    <p>QuantumFlow Infotech provides an innovative AI-powered platform designed to revolutionize how businesses manage their customer relationships. Our solution transforms traditional account management into a dynamic, data-driven process that anticipates customer needs and identifies growth opportunities.</p>
+                    <p>By leveraging advanced machine learning algorithms, we provide real-time insights into customer behavior, account health, and potential risks. This enables your team to take proactive measures that enhance customer satisfaction, improve retention rates, and drive revenue growth.</p>
+                    
+                    <div class="intro-features">
+                        <div class="feature-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Real-time AI Insights</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Enterprise Security</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>Seamless Integrations</span>
+                        </div>
+                    </div>
+
+                    <div class="intro-stats">
+                        <div class="stat-card">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Customer Satisfaction</div>
+                    </div>
+                    <div class="stat-card">
+                         <div class="stat-number">100%</div>
+                        <div class="stat-label">Revenue Growth</div>
+                    </div>
+                     <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="intro-visual animate-on-scroll">
+                    <div class="visual-card floating-card">
+                        <div class="visual-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Intelligent Insights Engine</h3>
+                        <p>Our AI analyzes customer data to provide actionable insights that drive strategic decisions and personalized customer experiences.</p>
+                        <div class="visual-animation">
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-ring"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <i class="fas fa-star"></i> Core Features
+                </div>
+                <h2 class="section-title">Everything You Need for Smart Account Management</h2>
+                <p class="section-subtitle">Our comprehensive platform combines AI-powered analytics with intuitive self-service tools to transform your customer relationships.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="feature-title">Account Insights</h3>
+                    <p class="feature-description">Enrich your account management with seamless self-service experience providing real-time access to account details and transaction histories.</p>
+                    <a href="#" class="feature-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="feature-badge">Popular</div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="feature-title">Opportunity Identification</h3>
+                    <p class="feature-description">Re-imagine opportunities in your accounts by identifying upselling and cross-selling possibilities tailored to customer preferences.</p>
+                    <a href="#" class="feature-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">Ticketing Insights</h3>
+                    <p class="feature-description">Understand your customers better with AI-powered ticketing systems that provide immediate access to support agents.</p>
+                    <a href="#" class="feature-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="feature-title">Client Meetings</h3>
+                    <p class="feature-description">Elevate customer convenience with seamless meeting scheduling via calendar integration and automated reminders.</p>
+                    <a href="#" class="feature-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="feature-title">Document Access</h3>
+                    <p class="feature-description">Transform payment experiences and provide easy access to contracts, invoices, and financial documents through secure portal.</p>
+                    <a href="#" class="feature-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="feature-title">Seamless Integrations</h3>
+                    <p class="feature-description">Connect with ERP systems, SAP, HR applications, Google Workspace, and other essential business tools effortlessly.</p>
+                    <a href="#" class="feature-link">
+                        Learn more <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Form -->
+    <section class="appointment-section" id="appointment">
+        <div class="container">
+            <div class="appointment-container">
+                <div class="appointment-form">
+                    <div class="form-header">
+                        <h2 class="form-title">Book Your Personalized Demo</h2>
+                        <p class="form-subtitle">Schedule a one-on-one session to see how QuantumFlow can transform your account management process.</p>
+                    </div>
+                    
+                    <form id="appointmentForm" action="https://formspree.io/f/xzdpnwnd" method="POST">
+                        <input type="hidden" name="_subject" value="New Demo Request - QuantumFlow">
+                        <input type="hidden" name="_replyto" value="@email">
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name" class="form-label">
+                                    <i class="fas fa-user"></i> Full Name *
+                                </label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company" class="form-label">
+                                    <i class="fas fa-building"></i> Company Name *
+                                </label>
+                                <input type="text" id="company" name="company" class="form-input" placeholder="Enter your company name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope"></i> Email Address *
+                                </label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">
+                                    <i class="fas fa-phone"></i> Phone Number
+                                </label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="date" class="form-label">
+                                    <i class="fas fa-calendar"></i> Preferred Date *
+                                </label>
+                                <input type="date" id="date" name="date" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="time" class="form-label">
+                                    <i class="fas fa-clock"></i> Preferred Time *
+                                </label>
+                                <select id="time" name="time" class="form-select" required>
+                                    <option value="">Select a time slot</option>
+                                    <option value="9:00 AM">9:00 AM - 10:00 AM</option>
+                                    <option value="10:00 AM">10:00 AM - 11:00 AM</option>
+                                    <option value="11:00 AM">11:00 AM - 12:00 PM</option>
+                                    <option value="1:00 PM">1:00 PM - 2:00 PM</option>
+                                    <option value="2:00 PM">2:00 PM - 3:00 PM</option>
+                                    <option value="3:00 PM">3:00 PM - 4:00 PM</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service" class="form-label">
+                                    <i class="fas fa-cogs"></i> Service Interest *
+                                </label>
+                                <select id="service" name="service" class="form-select" required>
+                                    <option value="">Select a service</option>
+                                    <option value="account-insights">Account Insights</option>
+                                    <option value="ticketing-system">Ticketing System</option>
+                                    <option value="integration">System Integration</option>
+                                    <option value="full-platform">Full Platform</option>
+                                    <option value="custom-solution">Custom Solution</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="employees" class="form-label">
+                                    <i class="fas fa-users"></i> Company Size *
+                                </label>
+                                <select id="employees" name="employees" class="form-select" required>
+                                    <option value="">Select company size</option>
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-50">11-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201-500">201-500 employees</option>
+                                    <option value="500+">500+ employees</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="message" class="form-label">
+                                    <i class="fas fa-comment"></i> Additional Information
+                                </label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your specific needs or questions..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <button type="submit" class="form-submit-btn">
+                                <i class="fas fa-paper-plane"></i> Book Appointment
+                                <div class="btn-shine"></div>
+                            </button>
+                            <p class="form-note">
+                                <i class="fas fa-shield-alt"></i> Your information is secure and will not be shared.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-infinity logo-icon"></i>
+                        <div class="logo-text">Quantum<span>Flow</span></div>
+                    </div>
+                    <p class="footer-description">AI-powered account management solution that helps businesses manage, retain, and grow existing customers with intelligent insights and seamless integrations.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">Product</h3>
+                        <a href="#features" class="footer-link">Features</a>
+                        <a href="#" class="footer-link">Integrations</a>
+                        <a href="#" class="footer-link">Pricing</a>
+                        <a href="#" class="footer-link">API Documentation</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">Resources</h3>
+                        <a href="#" class="footer-link">Documentation</a>
+                        <a href="#" class="footer-link">Blog</a>
+                        <a href="#" class="footer-link">Support Center</a>
+                        <a href="#video" class="footer-link">Video Demos</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-column-title">Company</h3>
+                        <a href="#about" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">Careers</a>
+                        <a href="#contact" class="footer-link">Contact Us</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 QuantumFlow Infotech Private Limited. All rights reserved.</p>
+                <p class="footer-note">Redesigned with ❤️ | Inspired by Sciqus Infotech Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

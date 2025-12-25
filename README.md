@@ -367,5 +367,5 @@ Deploy to your preferred hosting platform
 
 Best of luck with your internship application! 🎓✨
 
-Last Updated: December 2024
+Last Updated: December 2025
 Created with ❤️ for frontend development excellence
